@@ -14,7 +14,7 @@ const { decrypt } = buildClient( CommitmentPolicy.REQUIRE_ENCRYPT_ALLOW_DECRYPT 
 
 const data = {"type":"DatabaseActivityMonitoringRecords","version":"1.1","databaseActivityEvents":"AYABeC+alQyFbBQwjisZWWnMYSMAAAABAAJCQwAbRGF0YUtleQAAAIAAAAAMWuudKoyOs0ySHz//ADBelAhRTtUDlOtLKVsI4JxFVxJr+58fcI1gNK62Z89UIyRwKLYZVQIZOOW2uNb3wyMCAAAAAAwAABAAAAAAAAAAAAAAAAAAEkkAC0VCeZgOjMTdsx2kDv////8AAAABAAAAAAAAAAAAAAABAAAArLehJipyS/3fiXm7HS9df5+sUIsnZapBZWY5ksjO65lCJ0YI8IdRGaHb0EBG6jV+J7aJhUBIXv/99bqWu0J3jOuGeYuMWpOaOxHBSjuPsYvsd9AS9q+50MrAxclj/WWaQCIgH9S83XCApQLrQM0GOPmMFhqZ5riTSdoR74EFLcbQaex7V/Z56m+oz9ei2ZoA1K2cQgwAwCLYEhlwso5aDezn/A8O3qKLZGQXWxdrdbLdy8PYsC0zh1SWLtG4","key":"AQIDAHjQMhPzf7ht7Na5mdlcuMbHdw6MF9HouhTZ7o5co/r5MwFodkZVfuELPIisCQDdSFQvAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMwgBUeCYvj+bK5DUVAgEQgDssCD4nrBv2z0IZE/zjcgEFRf8pj3Xcc7eb4kmxqxM0+ZhAxVaXmuAr/G3YTeSZH1EzbzmRAqYVEvvVaw=="}
     
-const handler = async (event) => {
+exports.handler = async (event) => {
 
     const payload_decoded = Buffer.from(data.databaseActivityEvents, 'base64')
     const data_key_decoded = Buffer.from(data.key, 'base64')

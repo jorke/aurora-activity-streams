@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@aws-crypto/client-node": "^3.2.0",
+    "@aws-sdk/client-kms": "^3.301.0",
+    "aws-sdk": "^2.1345.0"
+  }
+}

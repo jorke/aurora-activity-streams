@@ -1,0 +1,1 @@
+start-activity-stream --resource-arn <value> --mode <value> --kms-key-id <value>
